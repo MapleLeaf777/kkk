@@ -1,0 +1,359 @@
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    body{
+        width: 1368px;
+        height: 2000px;
+        display: flex;
+        flex-direction: column;
+    }
+
+#head{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(210, 4, 4);
+    border-bottom: 4px red solid;
+    /*  background-attachment:fixed; *//* 固定背景图位置 */
+    /* background-repeat:no-repeat; *//* ，若图片过小，则使图片重复部分不会额外显示 */
+}
+    #head img{
+        width: 1368px;
+    }
+    #head div{
+        height: 100%;
+        display: flex;
+    }
+    #head div>div:nth-child(1){
+        height: 120px;
+        width: 120px;
+        background-color: rgb(210, 4, 4);
+        border: 2px rgb(210, 4, 4) solid;
+        font-size: 45px;
+        color: gold;
+        text-align: center;
+        line-height: 1.25;
+        font-family: 华文琥珀;
+        transition: transform 1s;
+        margin-left: 80px;
+    }
+    #head div>div:nth-child(2){
+        height: 100%;
+        width: 92%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #head div>div:nth-child(2)>p{
+        width: 120px;
+        height:120px;
+        background-color: rgb(210, 4, 4);
+        border: 2px rgb(210, 4, 4) solid;
+        color: gold;
+        font-size: 30px;
+        line-height: 4;
+        text-align: center;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+    .styMod{
+        transform: translateY(20px);
+        animation: anima 2s infinite;
+    }@keyframes anima{
+        from{border-top: 2px gold solid}
+        25%{border-right:2px gold solid}
+        50%{border-bottom: 2px gold solid}
+        75%{border-left: 2px gold solid}
+        to{}
+    }
+
+
+
+#body{
+    width: 100%;
+    height: 75%;
+}
+    .faPage{
+        width: 100%;
+        height: 100%;
+    }
+        .Fa1{
+            width: 30%;
+            height: 50%;
+            display: inline-block;
+        } 
+            .Fa1>p:nth-child(1){
+                color: red;
+                font-size: 40px;
+                line-height: 3;
+                text-align: center;
+                animation: tex 1s linear infinite;
+                transform-style: preserve-3d;
+                position: relative;
+            }@keyframes tex{
+                0%{ transform: rotate3d(0,0,1,8deg)}
+                50%{ transform: rotate3d(0,0,1,0deg)}
+                100%{ transform: rotate3d(0,0,1,8deg)}
+            }
+            .Fa1>p:nth-child(1):active{
+                top: 20px;
+            }
+            .Fa1>a{
+                text-decoration: none;
+                text-align: center;
+            }
+            .Fa1>a::after{
+                content: "⏯︎";
+                font-size: 40px;
+                position: relative;
+                bottom:130px;
+                left: 200px;
+            }
+            .Fa1>a>img{
+                width: 400px;
+                height: 200px;
+                position: relative;
+                left: 20px;
+            }
+            .Fa1>a>img:active{
+                animation: acImg 1s;
+            }@keyframes acImg{
+                from{}
+                to{transform: scale(1.5);}
+            }
+            .Fa1>div{
+                position: relative;
+                top: -20px;
+            }
+
+        .Fa2{
+            width: 70%;
+            height: 50%;
+            display: inline-block;
+            vertical-align:top;
+        }
+            .Fa2>div:nth-child(1){
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+            .Fa2>div:nth-child(1)>div:nth-child(1){
+                width: 3%;
+                height: 95%;
+                border-left: 2px rgb(131, 131, 131) solid;
+                position: relative;
+                left: 20px;
+                top: 20px;
+            }
+            .Fa2_1{
+                width: 97%;
+                height: 100%;
+                vertical-align: top;
+            }
+            .Fa2_1>div:nth-child(1){
+                width: 500px;
+                height: 40px;
+                overflow: hidden;
+                white-space: nowrap;
+                position: relative;
+                top: 20px;
+                left: 200px;
+                border-bottom: 2px red solid;
+                border-top: 2px azure solid;
+                animation: borderBtm 1.5s infinite;
+            }@keyframes borderBtm{
+                from{border-bottom: azure 2px solid;border-top: red 2px solid;}
+                to{border-bottom: red 2px solid;border-top: azure 2px solid;}
+            }
+            .Fa2_1>div:nth-child(1)>p{
+                display: inline-block;
+                font-size: 20px;
+                color: red;
+                animation: textP 8s linear infinite;
+            }@keyframes textP{
+                from{transform: translateX(50%);}
+                to{transform: translateX(-120%);}
+            }
+            .Fa2_1>div:nth-child(1)>p:hover{
+                animation-play-state: paused;/*鼠标触碰后，暂停动画*/
+            }
+            .Fa2_1a{
+                width: 100%;
+                position: relative;
+                top: 50px;
+            }
+            .Fa2_1a>div{
+                width: 400px;
+                height: 300px;
+                display: inline-block;
+                margin-left: 50px;
+                margin-top: 30px;
+                border-radius: 20px;
+            }
+            .Fa2_1a>div::after{
+                content: "";
+            }
+            .Fa2_1a>div:nth-child(1){
+                background-color: rgba(0, 255, 255,0.2);
+            }
+            .Fa2_1a>div:nth-child(2){
+                background-color: rgba(248, 0, 165,0.2);
+            }
+            .Fa2_1a>div:nth-child(3){
+                background-color: rgba(0, 255, 17,0.2);
+            }
+            .Fa2_1a>div:nth-child(4){
+                background-color: rgba(255, 217, 0,0.2);
+            }
+            .Fa2_1a>div>h2{
+                margin-left: 20px;
+                margin-top: 10px;
+                color: red;
+            }
+            .Fa2_1a>div>hr{
+                width: 90%;
+                background-color: rgb(0, 0, 0);
+                margin-left: 20px;
+            }
+            .Fa2_1a>div>div{
+                width: 100%;
+                height: 80%;
+                margin-top: 10px;
+                border-radius: 20px;
+                overflow-y: scroll;
+            }
+
+        .Fa3{
+            width: 100%;
+            height: 50%;
+        }
+            .Fa3>div:nth-child(1){
+                height: 100px;
+                border-top: 2px rgb(131, 131, 131) solid;
+                text-align: center;
+                position: relative;
+                top: 20px;
+            }
+            .Fa3>div:nth-child(1)>b{
+                font-size: 40px;
+                color: red;
+                line-height: 2;
+                transition: transform 1s;
+            }
+            .Fa3>div:nth-child(1)>b:hover{
+                color: aqua;
+            }
+            .Fa3_1a{
+                width: 100%;
+                height: 65%;
+                display: flex;
+                justify-content: center;
+            }
+            .Fa3_1a>div{
+                width: 270px;
+                height: 100%;
+            }
+            .Fa3_1a>div>h1{
+                display: inline-block;
+                writing-mode: vertical-lr;
+                font-family: 华文行楷;
+                font-size: 30px;
+                color: gold;
+                vertical-align: top;
+            }
+            .Fa3_1a>div>p{
+                display: inline-block;
+                writing-mode: vertical-lr;
+                font-family: 华文行楷;
+                font-size: 20px;
+            }
+            .Fa3_1b{
+                width: 100%;
+                height: 25%;
+            }
+            .Fa3_1b>h1{
+                color: red;
+            }
+            .Fa3_1b>p{
+                font-size: 20px;
+                margin-left: 50px;
+                margin-top: 10px;
+            }
+
+
+.xianPage{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    display: none;
+}
+
+
+.xingPage{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    display: none;
+}
+
+
+.minPage{
+    width: 100%;
+    height: 100%;
+    background-color: chartreuse;
+    display: none;
+}
+
+
+.jinPage{
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    display: none;
+}
+
+
+.zenPage{
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+    display: none;
+}
+
+
+.styMod2{
+    display: none;
+}
+
+
+
+#tail{
+    width: 100%;
+    height: 15%;
+}
+    #tail>div:nth-child(2){
+        width: 100%;
+        height: 100%;
+        background-image: url(../../img/国旗bottom.png);
+        background-size: cover;
+    }
+
+
+    #btnFixed{
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px red solid;
+        background-color: red;
+        font-size: 34px;
+        color: gold;
+        text-align: center;
+        line-height: 1.4;
+        bottom: 12%;
+        left: 3.5%;
+        display: none;
+        animation: anima 2s linear infinite;
+    }
